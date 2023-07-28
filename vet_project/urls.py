@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from vet.views import get_price
+from vet import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('price/', get_price),
+    path('price/', views.get_price),
 
 ]
