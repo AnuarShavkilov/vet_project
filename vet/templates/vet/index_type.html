@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Типы</title>
+</head>
+<body>
+<ul>
+    {% for sign in price_type_list %}
+        <li><a href='{% url 'type-name' sign %}'>{{ sign|title }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
