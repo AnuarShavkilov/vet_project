@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Типы</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{%block title%}
+Типы
+{%endblock%}
+
+{%block content%}
 <ul>
     {% for sign in description %}
-        <li><a href='{% url 'price-name' sign %}'>{{ sign|title }}</a></li>
+    <li><a href='{% url "price-name" sign %}'>{{ sign|title }}</a></li>
     {% endfor %}
 </ul>
-</body>
-</html>
+{%endblock%}
