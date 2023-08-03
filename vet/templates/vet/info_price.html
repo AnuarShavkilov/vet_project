@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 
+{%load static%}
+{% block css_add %}
+    <link rel="stylesheet" href="{%static 'vet/css/info_price.css'%}">
+{% endblock %}
+
 {%block title%}
 Прайс
 {%endblock%}
 
 {%block content%}
+{%include 'includes/navbar.html'%}
 <h1>Прайс услуг ветклиники для {{ service_name }}</h1>
 <h2>{{ description_data }}</h2>
 {%endblock%}

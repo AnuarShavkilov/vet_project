@@ -5,6 +5,7 @@
 {%endblock%}
 
 {%block content%}
+{%include 'includes/navbar.html'%}
 <ul>
     {% for sign in description %}
     <li><a href='{% url "price-name" sign %}'>{{ sign|title }}</a></li>

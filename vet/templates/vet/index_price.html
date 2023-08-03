@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 
+{%load static%}
+{% block css_add %}
+    <link rel="stylesheet" href="{%static 'vet/css/index_price.css'%}">
+{% endblock %}
+
+
 {%block title%}
 Меню
 {%endblock%}
 
 {%block content%}
+{%include 'includes/navbar.html'%}
 <ul>
     {% for sign in price_list %}
-        <li><a href='{% url 'price-name' sign %}'>{{ sign|title }}</a></li>
+        <li><a href='{% url "price-name" sign %}'>{{ sign|title }}</a></li>
     {% endfor %}
 </ul>
 {%endblock%}
