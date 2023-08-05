@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
+{%load static%}
+{% block css_add %}
+    <link rel="stylesheet" href="{%static 'vet/css/index_type.css'%}">
+{% endblock %}
+
 {%block title%}
 Типы
 {%endblock%}
@@ -8,7 +13,7 @@
 {%include 'includes/navbar.html'%}
 <ul>
     {% for sign in price_type_list %}
-        <li><a href='{% url 'type-name' sign %}'>{{ sign|title }}</a></li>
+        <li><a href='{% url "type-name" sign %}'>{{ sign|title }}</a></li>
     {% endfor %}
 </ul>
 {%endblock%}
